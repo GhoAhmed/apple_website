@@ -5,6 +5,8 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Highlights from './components/Highlights';
 import Model from './components/Model';
+import Features from './components/Features';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,5 +15,7 @@ root.render(
     <Hero />
     <Highlights />
     <Model />
+    <Features />
   </main>
 );
+

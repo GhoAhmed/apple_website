@@ -6,6 +6,8 @@
     "@gsap/react": "^2.1.1",
     "@react-three/drei": "^9.108.4",
     "@react-three/fiber": "^8.16.8",
+    "@sentry/cli": "^2.32.2",
+    "@sentry/react": "^8.19.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -20,7 +22,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "sentry:sourcemaps": "sentry-cli sourcemaps inject --org cdf-center --project iphone-apple src && sentry-cli sourcemaps upload --org cdf-center --project iphone-apple src"
   },
   "eslintConfig": {
     "extends": [
