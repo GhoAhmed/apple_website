@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react'
-import { hightlightsSlides } from '../constants'
+import React, { useEffect, useRef, useState } from 'react';
+import { hightlightsSlides } from '../constants';
 import gsap from 'gsap';
 import { pauseImg, playImg, replayImg } from '../utils';
 import { useGSAP } from '@gsap/react';
@@ -63,14 +63,14 @@ const VideoCarousel = () => {
             let anim = gsap.to(span[videoId], {
                 onUpdate: () => {
                     const progress = Math.ceil(anim.progress() * 100);
-                    if(progress !== currentProgress) {
+                    if(progress != currentProgress) {
                         currentProgress = progress;
                         gsap.to(videoDivRef.current[videoId], {
-                            width: window.innerWidth < 760 ? '10vw' : window.innerWidth < 1200 ? '10vw' : '4vw'
+                            width: window.innerWidth < 760 ? '10vw' : window.innerWidth < 1200 ? '10vw' : '4vw',
                         })
                         gsap.to(span[videoId], {
                             width: `${currentProgress}%`,
-                            backgroundColor: 'white'
+                            backgroundColor: 'white',
                         })
                     }
                 },
@@ -89,7 +89,7 @@ const VideoCarousel = () => {
                 anim.restart();
             }
             const animUpdate = () => {
-                anim.progress(videoDivRef.current[videoId].currentTime / hightlightsSlides[videoId].videoDuration)
+                anim.progress(videoDivRef.current[videoId] / hightlightsSlides[videoId].videoDuration)
             }
             if(isPlaying){
                 gsap.ticker.add(animUpdate)
