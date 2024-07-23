@@ -7,6 +7,7 @@ import Highlights from './components/Highlights';
 import Model from './components/Model';
 import Features from './components/Features';
 import HowItWorks from './components/HowItWorks';
+import Footer from './components/Footer';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -18,6 +19,7 @@ root.render(
     <Model />
     <Features />
     <HowItWorks />
+    <Footer />
   </main>
 );
 
